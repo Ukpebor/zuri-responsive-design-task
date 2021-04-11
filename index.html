@@ -8,20 +8,32 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="nav-bar">
+  <header>
+       <nav>
         <div class="logo">Snapshot</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <!-- Burger Section -->
         <div class="burger">
-            <div class="line1"></div>
-            <div class="link2"></div>
-            <div class="link3"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
         </div>
-    </div>
+        <ul class="nav-links">
+            <li>
+                 <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Gallery</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+  </header>
+    
 
     <!-- Hero section -->
 
@@ -108,6 +120,23 @@
         </div>
         <h6>Copyright &copy; 2021 Zuri Training.</h6>
     </div>
-    <script src="burger.js"></script>
+    <!--javascript navigation bar scroll functionality-->
+    <script>
+      $(function() {
+        "use strict";
+    
+        var winH = $(window).height();
+    
+        $("header").height(winH);
+    
+        $("nav  ul.nav-links li a").on("click", function(e) {
+          var getAttr = $(this).attr("href");
+    
+          e.preventDefault();
+          $("html").animate({ scrollTop: $(getAttr).offset().top }, 1000);
+        });
+      });
+    </script>
+    <script src="style.js"></script>
 </body>
 </html>
