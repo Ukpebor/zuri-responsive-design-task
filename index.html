@@ -4,18 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>HTML</title>
-  
-  <!-- HTML -->
-  
-
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- Project -->
    <header>
       <nav>
         <div class="nav-bar">
@@ -165,11 +158,8 @@
     <script>
       $(function () {
         "use strict";
-
         var winH = $(window).height();
-
         $("header").height(winH);
-
         $("nav .nav-bar ul.nav-links li a").on("click", function (e) {
           var getAttr = $(this).attr("href");
 
